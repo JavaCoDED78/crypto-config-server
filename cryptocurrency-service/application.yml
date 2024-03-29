@@ -18,3 +18,20 @@ spring:
       show_sql: true
       format_sql: true
     open-in-view: false
+
+springdoc:
+  api-docs:
+    path: /cryptocurrency-service/api-docs
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
