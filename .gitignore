@@ -36,6 +36,6 @@ out/
 ### VS Code ###
 .vscode/
 
-### Additional ###
-.env
-*.jks
+#### Additional ###
+#.env
+#*.jks
