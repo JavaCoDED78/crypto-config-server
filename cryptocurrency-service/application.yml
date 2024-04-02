@@ -40,3 +40,6 @@ coin-api:
   feign:
     name: coinLoreApiFeignClient
     url: https://api.coinlore.net/api
+
+scheduler:
+  enable: true
