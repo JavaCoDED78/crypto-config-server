@@ -35,3 +35,11 @@ management:
   zipkin:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
+
+security:
+  jwt:
+    secret:
+    access-token-validity-in-seconds: 3600
+    refresh-token-validity-in-seconds: 2592000
+    token-prefix: Bearer
+    header-string: Authorization
