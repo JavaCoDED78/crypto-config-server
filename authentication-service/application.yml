@@ -6,7 +6,7 @@ spring:
     name: authentication-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/cryptocurrency
+    url: jdbc:postgresql://localhost:5432/cryptocurrency&currentSchema=authentication
     username: "{cipher}AQBdlHk583zbayrTGz7Tu72a0Vkl5YXh+Lk05vd2ALWDX9be1FWrig+Pt4MjbzjDz7Qb23+4KuWIlaf1+GGnyMHWBvtUbnAjY9MaiHFijRhp3mbBvmuiDYCknruSB+EZTq4xCsjixqaWQ9US3aSJVhq2Ro1B2VUhB0NJWFrWSDIJGU7X9z74+/iEqbTrVdKEsaKv8zcRuA6UutoxZBaNo+eXYtjoqch/PBCQr45anlwE+QHcLfGoPERzv5g3Uz81h6fMe1PNL99FQt3VkvEBrDTuvyc7L7lVxYY8aolIhX3gsP/kGRz0zXmOyfWOErBeR0YbMTDgwuUQq/OTfuFfdUZ7bO1VoVAcC8yqpso6pQw8iztUjUl5LFkUPLawcVKATN4="
     password: "{cipher}AQB3E747YwRt4bUmgQRrx7v/+ILhL7lSiMDaDiOn4Asgxo8Ox35Y5YW3L47svoVKgU9TR1SmOAS/uZRdzVf/ZlZ57QjWGKzQsfzzrh8dZeK7y4R79wTeDZOQYB1gik0YomJn/Ky4lrX9TxuswdLnKOtKF3g5a0U9PTNnY9MHJe/8m0O3DGHDDhdTnw4ZXY3SKwZAWLFQDHZp6Z/Kbrq9hfU3+8yxxaH8r0o8hsZjCKuz3KACb3PgeVLIE5QG2hOUx76liebn1CG4ueAYH2ZJbKWc9r0M56OAB938WwDELI+onvRudSl55Asj4gTRh1JeZjN4wIfM1H/WaK/PSpztGFBop3AUPC9jroxVmtH5620lhrglyXpplYfF7XXjpSDdtaQ="
     driver-class-name: org.postgresql.Driver
