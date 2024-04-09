@@ -38,7 +38,7 @@ management:
 
 security:
   jwt:
-    secret:
+    secret: "{cipher}AQBEydvH0hJ8Xst+WF3xE0aaimd/7FoipoiLe/YXCJUilV7CjsMB3xAZxyC2zhmzcv/BdQNTZyYIkbXw/YA/vjU/KzWP4PEKYSCwxyA6JQgtww407rcMOk3HDQB0U1cLgizBAujxoRh0cXLyjSRV6mFauf9orU2ZNzprR4eQzxOQAbsPirEHuP5R60Y7oQAKdRkfGmHlr4cB4A57qU9C5arTUqXrhrX+uXQGxSJCpYKW57A+uLdn5RUFVaE/Sd0IvrSORc9AApReZFzsyJyoqgJR1JOjs2m5EPq0bVXLIDSHOSs6dgreRYut7zTMp7i9wibDcMF8I/JzDmaWTswNmYSviXMrVJFvii3CNWSrEFOcup6o8gRHZSWXT1B3ajcgDYRUn/p3UvfdzCbYkMso0TtYAsiSA2NU/8MMcMHFZnCSyG0DMuUpNJAgmBAyGOPQbXfvH63F3FZGLBHpT5EU7U8F"
     access-token-validity-in-seconds: 3600
     refresh-token-validity-in-seconds: 2592000
     token-prefix: Bearer
