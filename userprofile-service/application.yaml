@@ -17,7 +17,7 @@ spring:
 
 springdoc:
   api-docs:
-    path: /profile-service/api-docs
+    path: /userprofile-service/api-docs
 
 logging:
   level:
