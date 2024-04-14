@@ -1,0 +1,80 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: authentication-service
+          uri: lb://AUTHENTICATION-SERVICE
+          predicates:
+            - Path=/api/v1/auth/**
+
+        - id: authentication-service-docs
+          uri: lb://AUTHENTICATION-SERVICE
+          predicates:
+            - Path=/authentication-service/api-docs/**
+
+        - id: userprofile-service-docs
+          uri: lb://USERPROFILE-SERVICE
+          predicates:
+            - Path=/userprofile-service/api-docs/**
+
+        - id: userprofile-service
+          uri: lb://USERPROFILE-SERVICE
+          predicates:
+            - Path=/api/v1/profiles/**
+          filters:
+            - Authentication
+
+        - id: cryptocurrency-service
+          uri: lb://CRYPTOCURRENCY-SERVICE
+          predicates:
+            - Path=/api/v1/coins/**
+          filters:
+            - Authentication
+
+        - id: cryptocurrency-service-docs
+          uri: lb://CRYPTOCURRENCY-SERVICE
+          predicates:
+            - Path=/cryptocurrency-service/api-docs**
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    url: http://localhost:8080/v3/api-docs
+    urls:
+      - name: userprofile-service
+        url: /userprofile-service/api-docs
+
+      - name: authentication-service
+        url: /authentication-service/api-docs
+
+      - name: cryptocurrency-service
+        url: /cryptocurrency-service/api-docs
+
+logging:
+  level:
+    root: info
+    org.springframework.cloud.gateway.route.RouteDefinitionLocator: info
+    org.springframework.cloud.gateway: trace
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+
+services:
+  auth:
+    name: authentication-service
