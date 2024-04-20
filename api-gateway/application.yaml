@@ -93,3 +93,4 @@ management:
 services:
   auth:
     name: authentication-service
+
